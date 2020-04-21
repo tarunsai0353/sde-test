@@ -105,7 +105,13 @@ See `sample_output.json`, or example above. You must follow the file structure e
 
 ### Docker
 
-You must **create and fill out a working** `Dockerfile` in the directory of your solution, that will handle the building and dependencies for your final executable. Your final executable should be setup as an entrypoint so that we can automatically pass in the paths for your program to process input from and write output to. If the build fails, or the Dockerfile does not accept arguments to your program (e.g. via `docker run sde-test-image input_file.json output_file.json`), then **we will be unable to grade your submission** for correctness.
+You must **create and fill out a working** `Dockerfile` in the directory of your solution, that will handle the building and dependencies for your final executable.
+
+Your final executable should be setup as an entrypoint so that we can automatically pass in the paths for your program to process input from and write output to.
+
+You must set your `WORKDIR` to be `/submission`, make sure to copy your files there, in your container. This is important because we will be setting up volumes on our end, and would like to reason about your file system.
+
+If the build fails, or the Dockerfile does not accept arguments to your program (e.g. via `docker run sde-test-image input_file.json output_file.json`), then **we will be unable to grade your submission** for correctness.
 
 ### Testing
 
