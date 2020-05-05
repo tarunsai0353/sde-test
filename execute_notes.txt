@@ -1,0 +1,11 @@
+I installed Docker in VM.
+
+1) docker-Running the docker command- Shows usage , options and commands. (SSH login)
+2) docker pull openjdk - Pulling a docker image for java.(latest image gets downloaded)
+3) docker images - the open jdk image will be listed.
+4) sudo docker run -it openjdk bash - openjdk docker image is for java.(All the java commands are available)
+5) docker cp SRC_PATH |DEST_PATH - to obtain docker container ID from the command prompt.
+6) javac sde-test 
+   ls -l -the application binaries will generate 
+7) java sde-test input_file.json output_file.json - compile and runs the java in docker 
+ and it will generate the output.
